@@ -1,5 +1,5 @@
 {
-  "name": "@riophae/vue-treeselect",
+  "name": "woqu-treeselect",
   "version": "0.0.38",
   "description": "A multi-select component with nested options support for Vue.js",
   "author": "Riophae Lee <riophaelee@gmail.com>",
