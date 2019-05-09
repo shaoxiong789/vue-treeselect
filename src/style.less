@@ -40,9 +40,12 @@
 @treeselect-multi-value-margin-y: 2px;
 @treeselect-multi-value-padding-x: @treeselect-padding;
 @treeselect-multi-value-padding-y: 0;
+@treeselect-multi-value-border-radius: 4px;
 @treeselect-multi-value-font-size: @treeselect-font-size-sm;
-@treeselect-multi-value-font-color: @md-light-blue-600;
-@treeselect-multi-value-item-bg: @md-blue-50;
+// @treeselect-multi-value-font-color: @md-light-blue-600;
+@treeselect-multi-value-font-color: #909399;
+// @treeselect-multi-value-item-bg: @md-blue-50;
+@treeselect-multi-value-item-bg: #f0f2f5;
 @treeselect-multi-value-item-bg-new: @md-green-50;
 @treeselect-multi-value-item-border-width: 1px;
 @treeselect-multi-value-item-border-color: transparent;
@@ -58,7 +61,8 @@
 @treeselect-multi-value-remove-color-hover: @md-red-600;
 @treeselect-multi-value-remove-size: 6px;
 @treeselect-multi-value-divider-color: #fff;
-@treeselect-limit-tip-font-color: @md-grey-400;
+// @treeselect-limit-tip-font-color: @md-grey-400;
+@treeselect-limit-tip-font-color: #909399;
 @treeselect-limit-tip-font-size: @treeselect-multi-value-font-size;
 @treeselect-limit-tip-font-weight: 600;
 @treeselect-single-input-font-size: inherit;
@@ -453,6 +457,7 @@
   border: @treeselect-multi-value-item-border-width solid @treeselect-multi-value-item-border-color;
   border-radius: @treeselect-border-radius-sm;
   color: @treeselect-multi-value-font-color;
+  // color: #909399;
   font-size: @treeselect-multi-value-font-size;
   vertical-align: top; // stylelint-disable-line plugin/declaration-block-no-ignored-properties
 
@@ -496,7 +501,7 @@
 .vue-treeselect__value-remove {
   color: @treeselect-multi-value-remove-color;
   padding-left: @treeselect-multi-value-padding-x;
-  border-left: 1px solid @treeselect-multi-value-divider-color;
+  // border-left: 1px solid @treeselect-multi-value-divider-color;
   line-height: 0;
 
   .vue-treeselect__multi-value-item:hover & {
@@ -531,9 +536,11 @@
   .reset-cursor();
 
   display: block;
-  margin: @treeselect-multi-value-margin-y @treeselect-multi-value-margin-x;
-  padding: (@treeselect-multi-value-padding-y + @treeselect-multi-value-item-border-width) 0;
+  margin: @treeselect-multi-value-item-border-width @treeselect-multi-value-margin-x;
+  padding: (@treeselect-multi-value-padding-y + @treeselect-multi-value-margin-y) 5px;
   color: @treeselect-limit-tip-font-color;
+  border-radius: @treeselect-multi-value-border-radius;
+  background-color: @treeselect-multi-value-item-bg;
   font-size: @treeselect-limit-tip-font-size;
   font-weight: @treeselect-limit-tip-font-weight;
 }

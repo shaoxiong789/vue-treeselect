@@ -1,6 +1,6 @@
 <template>
   <div>
-    <treeselect :options="options" :multiple="multiple" v-model="value" />
+    <treeselect :options="options" :limit="1" :multiple="multiple" v-model="value" />
     <label><input type="checkbox" v-model="multiple"> Multi-select mode</label>
   </div>
 </template>
@@ -12,7 +12,7 @@
   export default {
     data: () => ({
       multiple: true,
-      value: [ longAToZ ],
+      value: [ longAToZ, longZToA ],
       options: [ {
         id: longAToZ,
         label: longAToZ,
