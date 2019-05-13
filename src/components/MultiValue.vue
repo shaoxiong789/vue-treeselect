@@ -12,6 +12,13 @@
         const { instance } = this
 
         return instance.internalValue
+          .filter(key => {
+            if (instance.getNode(key).label.indexOf('unknown') === -1) {
+              return true
+            } else {
+              return false
+            }
+          })
           .slice(0, instance.limit)
           .map(instance.getNode)
           .map(node => (
@@ -21,7 +28,15 @@
 
       renderExceedLimitTip() {
         const { instance } = this
-        const count = instance.internalValue.length - instance.limit
+        const count = instance.internalValue
+          .filter(key => {
+            if (instance.getNode(key).label.indexOf('unknown') === -1) {
+              return true
+            } else {
+              return false
+            }
+          })
+          .length - instance.limit
 
         if (count <= 0) return null
 

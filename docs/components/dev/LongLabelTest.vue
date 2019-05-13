@@ -11,8 +11,8 @@
 
   export default {
     data: () => ({
-      multiple: true,
-      value: [ longAToZ, longZToA ],
+      multiple: false,
+      value: [ '12412' ],
       options: [ {
         id: longAToZ,
         label: longAToZ,

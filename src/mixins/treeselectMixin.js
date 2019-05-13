@@ -999,7 +999,6 @@ export default {
       )
 
       if (nodeId == null) return null
-
       return nodeId in this.forest.nodeMap
         ? this.forest.nodeMap[nodeId]
         : this.createFallbackNode(nodeId)

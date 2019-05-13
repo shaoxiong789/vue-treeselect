@@ -19,13 +19,13 @@
     render() {
       const { instance, $parent: { renderValueContainer } } = this
       const shouldShowValue = instance.hasValue && !instance.trigger.searchQuery
-
+      console.log(shouldShowValue && this.renderSingleValueLabel())
       return renderValueContainer([
-        shouldShowValue && (
+        shouldShowValue && ((this.renderSingleValueLabel().indexOf('unknown') === -1) && (
           <div class="vue-treeselect__single-value">
             { this.renderSingleValueLabel() }
           </div>
-        ),
+        )),
         <Placeholder />,
         <Input ref="input" />,
       ])
